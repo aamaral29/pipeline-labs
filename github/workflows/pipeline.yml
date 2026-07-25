@@ -38,3 +38,5 @@ jobs:
         run: |
           echo "== VARIÁVEIS DE CONTEXTO =="
           echo "NODE_VERSION: ${{ env.NODE_VERSION }}"
+
+          
