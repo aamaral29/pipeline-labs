@@ -1,10 +1,12 @@
-name: Hello Github Actions
+name: Hello GitHub Actions
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 env:
@@ -12,14 +14,15 @@ env:
 
 jobs:
   hello-job:
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout do código
-            uses: actions/checkout@v4
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
 
-        - name: Exibir mensagem de boas-vindas
-          run: echo "Olá, GitHub Actions!"
+      - name: Exibir mensagem de boas-vindas
+        run: echo "Olá, GitHub Actions!"
+
   demonstrando-estrutura:
     name: Demonstrando Estrutura Básica
     runs-on: ubuntu-latest
@@ -29,14 +32,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Executar Hello World
-        run: echo "Hello Github Actions!"
+        run: echo "Hello GitHub Actions!"
 
-      - name: 
+      - name: Informações do ambiente
         run: |
-          echo "Sistema Operqacional: ${{ runner.os}}"
-          echo "Diretório atual: ${ pwd }"
-          echo "Data atual: ${ date }"
-          echo "Sistema Operqacional: ${ whoami }"
+          echo "Sistema Operacional: ${{ runner.os }}"
+          echo "Diretório atual: $(pwd)"
+          echo "Data atual: $(date)"
+          echo "Usuário: $(whoami)"
 
       - name: Listar arquivos do repositório
         run: ls -la
