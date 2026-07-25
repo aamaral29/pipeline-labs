@@ -3,10 +3,10 @@ name: "Estrutura de diretórios e Arquivos"
 on: 
   push:
     branches: [main]  
-  worrkflow_dispatch:
+  workflow_dispatch:
 
 env:
-  NODE_VERSION: '18'
+  NODE_VERSION: "18"
 
 jobs:
   demostrando-estrutura:
@@ -20,7 +20,7 @@ jobs:
       - name: Mostrar estrutura .github/workflows
         run: |
           echo "ESTRUTURA DE DIRETÓRIOS E ARQUIVOS .github/workflows:"
-          ls -la github/workflows
+          ls -la .github/workflows
           echo ""
           echo "Total de workflows: $(ls -1 .github/workflows | wc -l)"
 
@@ -37,7 +37,7 @@ jobs:
       - name: Variávei de contexto
         run: |
           echo "== VARIÁVEIS DE CONTEXTO =="
-          echo "Variáveis env: ${{env.NODE_VERSION}}"
+          echo "Variável env: ${{ env.NODE_VERSION }}"
           echo "1. ENV: Define variáveis de ambiente"
           echo "2. contextos: Acesso a informação do workflow, job e steps"
           echo ""
