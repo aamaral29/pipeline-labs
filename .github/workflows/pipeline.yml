@@ -1,15 +1,25 @@
-name: Estrutura de diretórios e Arquivos
+name: Hello Github Actions
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 env:
   NODE_VERSION: "18"
 
 jobs:
+  hello-job:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout do código
+            uses: actions/checkout@v4
+
+        - name: Exibir mensagem de boas-vindas
+          run: echo "Olá, GitHub Actions!"
   demonstrando-estrutura:
     name: Demonstrando Estrutura Básica
     runs-on: ubuntu-latest
@@ -18,25 +28,21 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Mostrar estrutura .github/workflows
-        run: |
-          echo "ESTRUTURA DE DIRETÓRIOS E ARQUIVOS .github/workflows:"
-          ls -la .github/workflows
-          echo ""
-          echo "Total de workflows: $(ls -1 .github/workflows | wc -l)"
+      - name: Executar Hello World
+        run: echo "Hello Github Actions!"
 
-      - name: Elementos obrigatórios do workflow
+      - name: 
         run: |
-          echo "ELEMENTOS OBRIGATÓRIOS DO WORKFLOW:"
-          echo "1. name"
-          echo "2. on"
-          echo "3. jobs"
-          echo "4. runs-on"
-          echo "5. steps"
+          echo "Sistema Operqacional: ${{ runner.os}}"
+          echo "Diretório atual: ${ pwd }"
+          echo "Data atual: ${ date }"
+          echo "Sistema Operqacional: ${ whoami }"
 
-      - name: Variáveis de contexto
+      - name: Listar arquivos do repositório
+        run: ls -la
+
+      - name: Comandos múltiplos
         run: |
-          echo "== VARIÁVEIS DE CONTEXTO =="
-          echo "NODE_VERSION: ${{ env.NODE_VERSION }}"
-
-          
+          echo "Este é o Lab 01 do curso de GitHub Actions"
+          echo "Workflow executado com sucesso!"
+          echo "Pronto para o próximo desafio!"
