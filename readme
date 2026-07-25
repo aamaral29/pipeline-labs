@@ -1,0 +1,166 @@
+# 🚀 Treinamento de GitHub CI/CD
+
+Este repositório foi criado com o objetivo de aprender, praticar e demonstrar a implementação de pipelines de **Integração Contínua (CI)** e **Entrega/Implantação Contínua (CD)** utilizando o **GitHub Actions**.
+
+Ao longo deste treinamento serão desenvolvidos workflows para automatizar tarefas do ciclo de desenvolvimento de software, desde a validação de código até a publicação de aplicações.
+
+---
+
+## 📖 Sobre o Projeto
+
+A automação é um dos pilares do DevOps moderno. Utilizando o GitHub Actions, é possível criar pipelines que executam automaticamente processos como:
+
+* Compilação da aplicação;
+* Execução de testes automatizados;
+* Validação da qualidade do código;
+* Geração de artefatos;
+* Publicação de versões;
+* Deploy automático em diferentes ambientes.
+
+Este repositório serve como ambiente de estudo para explorar esses conceitos na prática.
+
+---
+
+## 🎯 Objetivos do Treinamento
+
+Ao final deste treinamento espera-se compreender como:
+
+* Configurar o GitHub Actions;
+* Criar workflows em YAML;
+* Automatizar builds;
+* Executar testes automatizados;
+* Validar qualidade de código;
+* Trabalhar com múltiplos ambientes;
+* Utilizar variáveis de ambiente e Secrets;
+* Gerenciar artefatos;
+* Automatizar processos de deploy;
+* Aplicar boas práticas de CI/CD.
+
+---
+
+## 📚 Conteúdo Abordado
+
+* Introdução ao CI/CD
+* GitHub Actions
+* Workflows
+* Jobs
+* Steps
+* Events (Triggers)
+* Runners
+* Actions Oficiais
+* Actions da Comunidade
+* Cache de Dependências
+* Matrix Builds
+* Artifacts
+* GitHub Secrets
+* Variáveis de Ambiente
+* Reusable Workflows
+* Deploy Automatizado
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* Git
+* GitHub
+* GitHub Actions
+* YAML
+
+> Dependendo do exercício, outras tecnologias poderão ser utilizadas.
+
+---
+
+## 📂 Estrutura do Repositório
+
+```text
+.
+├── .github/
+│   └── workflows/          # Pipelines do GitHub Actions
+├── src/                    # Código-fonte
+├── tests/                  # Testes automatizados
+├── docs/                   # Documentação complementar
+└── README.md
+```
+
+---
+
+## ⚙️ Fluxo do Pipeline
+
+```text
+Desenvolvedor
+      │
+      ▼
+Push / Pull Request
+      │
+      ▼
+GitHub Actions
+      │
+      ├── Checkout do código
+      ├── Instalação das dependências
+      ├── Build da aplicação
+      ├── Execução dos testes
+      ├── Validação da qualidade do código
+      ├── Geração de artefatos
+      └── Deploy (quando configurado)
+```
+
+---
+
+## ▶️ Como Utilizar
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd seu-repositorio
+```
+
+A partir daí, siga as instruções específicas de cada exercício ou workflow presente no treinamento.
+
+---
+
+## 📌 Boas Práticas
+
+* Mantenha os workflows simples e organizados.
+* Automatize todas as validações possíveis.
+* Utilize Pull Requests como ponto de controle.
+* Nunca armazene credenciais diretamente no código.
+* Utilize **GitHub Secrets** para informações sensíveis.
+* Versione toda alteração nos pipelines.
+* Documente cada workflow criado.
+
+---
+
+## 🎓 Objetivo Educacional
+
+Este projeto possui finalidade exclusivamente **didática**, sendo utilizado para o estudo dos conceitos de CI/CD, automação de pipelines e utilização do GitHub Actions.
+
+---
+
+## 📖 Referências
+
+* Documentação oficial do GitHub Actions
+* Documentação oficial do GitHub
+* Práticas de DevOps
+* Conceitos de Continuous Integration e Continuous Delivery
+
+---
+
+## 🤝 Contribuições
+
+Sugestões e melhorias são sempre bem-vindas. Caso encontre alguma oportunidade de melhoria, fique à vontade para abrir uma *Issue* ou enviar um *Pull Request*.
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença **MIT**.
+
+---
+
+⭐ Se este repositório foi útil para o seu aprendizado, deixe uma estrela para apoiar o projeto!
